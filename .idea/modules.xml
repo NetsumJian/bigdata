@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/B_JUC/B_JUC.iml" filepath="$PROJECT_DIR$/B_JUC/B_JUC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a_nio/a_nio.iml" filepath="$PROJECT_DIR$/a_nio/a_nio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigdata.iml" filepath="$PROJECT_DIR$/bigdata.iml" />
+    </modules>
+  </component>
+</project>

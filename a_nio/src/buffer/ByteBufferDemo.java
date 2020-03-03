@@ -1,4 +1,4 @@
-package day01;
+package buffer;
 
 import java.nio.ByteBuffer;
 
@@ -14,10 +14,12 @@ public class ByteBufferDemo {
 
         System.out.println(buffer.position());
 
-        buffer.limit(buffer.position());
-        buffer.position(0);
+        // buffer.limit(buffer.position());
+        // buffer.position(0);
+        buffer.flip();
 
-        while (buffer.position() < buffer.limit()){
+        //while (buffer.position() < buffer.limit()){
+        while (buffer.hasRemaining()) {
             System.out.println(buffer.get());
         }
 
