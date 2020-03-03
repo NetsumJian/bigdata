@@ -3,11 +3,15 @@ package threadpool;
 import java.util.concurrent.*;
 
 public class ExecutorServiceDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         // threadPoolExecutor();
         // ExecutorService es = Executors.newCachedThreadPool();
 
         ExecutorService es = Executors.newFixedThreadPool(5);
+        Future<String> f = es.submit(new CDemo());
+        System.out.println(f.get());
+
+        es.shutdown();
     }
 
     private static void threadPoolExecutor() {
@@ -38,5 +42,13 @@ class ESThread implements Runnable{
             e.printStackTrace();
         }
         System.out.println(Thread.currentThread().getName()+ "\t\t线程结束");
+    }
+}
+
+class CDemo implements Callable<String>{
+
+    @Override
+    public String call() throws Exception {
+        return "Success...";
     }
 }
